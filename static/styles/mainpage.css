@@ -1,0 +1,140 @@
+body {
+    background: url('../images/BACKGROUND.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+      /*overflow: hidden; !* Hide scrollbars *!*/
+
+}
+
+.buttonload {
+    background-color: #0478aa; /* Green background */
+    border: none; /* Remove borders */
+
+    color: white; /* White text */
+    padding: 12px 24px; /* Some padding */
+    font-size: 16px; /* Set a font-size */
+    border-radius: 12px; /* Rounded borders */
+
+}
+.buttonload .upload {
+    background-color: #0f484a; /* Green background */
+
+}
+
+.upload {
+    background-color: #0f394a;
+}
+
+.choice {
+    background-color: #008871;
+}
+
+/* Add a right margin to each icon */
+.fa {
+    margin-left: -12px;
+    margin-right: 8px;
+    broder-radius: 12px;
+}
+
+.gif {
+
+    position: absolute;
+    right: 7%;
+    top: 10%;
+    width: 80%;
+    height: auto;
+}
+
+#form {
+    position: absolute;
+    left: 7%;
+    top: 30%;
+}
+
+#result {
+    font-size: 20px; /* Set a font-size */
+    color: aliceblue;
+}
+
+iframe {
+    position: absolute;
+    left: 7%;
+    top: 800%;
+
+}
+
+
+
+.dataset {
+    position: absolute;
+    left: 7%;
+    right: 7%;
+    top: 55%;
+}
+
+#dataset_table thead{
+    font-family: Roboto Condensed, Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    height: 60px;
+    text-align: center;
+}
+#dataset_table tbody{
+    font-family: Roboto Condensed, Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    background: palevioletred;
+}
+/* width */
+::-webkit-scrollbar{
+
+    background-color: transparent;
+}
+/* Track */
+::-webkit-scrollbar-track{
+
+  border-radius: 10px;
+    background-color: transparent;
+
+}
+/* Handle */
+::-webkit-scrollbar-thumb{
+  background: #104962;
+
+  height: 120px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover{
+  background: #091219;
+    height: 120px;
+}
+td h3 {
+    color: aliceblue;
+}
+
+.form {
+    background-color: #ffffff;
+	border-radius: 12px;
+	max-width: 400px;
+	margin: 10% auto;
+	height: 500px;
+	position: relative;
+	padding: 34px;
+	color: #444;
+	cursor: default;
+    right: 20%;
+    top: 20%;
+}
+
+.form:hover {
+    background: #f1f1f1;
+}
+
+.login {
+    position: absolute;
+    right: 1%;
+    top: 1%;
+}
