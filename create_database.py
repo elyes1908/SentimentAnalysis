@@ -6,5 +6,5 @@ if __name__ == '__main__':
         db.create_all()
         print('Database created.')
     except Exception as e:
-        print('Database not created.')
+        print('Database creation failed.')
         print(e)
