@@ -1,3 +1,5 @@
 predict.pkl
 database.db
-/__pycache__
+__pycache__
+/__pycache__/
+**/__pycache__/
