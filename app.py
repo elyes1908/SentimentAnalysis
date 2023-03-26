@@ -10,6 +10,12 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import InputRequired, Length, ValidationError
+from transformers import AutoTokenizer, TFAutoModelForSequenceClassification
+from transformers import pipeline
+
+tokenizer = AutoTokenizer.from_pretrained("tblard/tf-allocine", use_fast=True)
+model = TFAutoModelForSequenceClassification.from_pretrained("tblard/tf-allocine")
+nlp = pipeline('sentiment-analysis', model=model, tokenizer=tokenizer)
 
 app = Flask(__name__)
 bcrypt = Bcrypt(app)
@@ -66,9 +72,10 @@ def process():
     comment = request.form['comment_input']
     print(comment)
     if comment:
-        sentiment = joblib.load('predict.pkl')
-        class_ = sentiment(comment)[0]['label']
-        score_ = sentiment(comment)[0]['score']
+
+
+        class_ = nlp(comment)[0]['label']
+        score_ = nlp(comment)[0]['score']
         print(f"The sentiment of the text is {class_}")
         return jsonify({'class_': class_, 'score_': round(score_, 2)})
 
