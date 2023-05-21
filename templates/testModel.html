@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Sentiment Analysis - DXC.technology</title>
+    <link rel="icon" href="../static/images/logo.jpg" type="image/icon type">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/form.js') }}"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/mainpage.css') }}">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css"
+          rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+
+</head>
+
+<body style="background-color: white">
+
+<hr>
+
+
+  <table id="dataset_table" class="table">
+        <thead>
+        <tr style="color: aliceblue;">
+            <td>Task</td>
+            <td>Comment</td>
+            <td>Feedback</td>
+
+        </tr>
+        </thead>
+      {% for row in rows %}
+        <tbody id="table">
+        <tr>
+            <td>Task 1</td>
+            <td>Comment 1</td>
+            <td>Feedback 1</td>
+        </tr>
+        </tbody>
+
+    </table>
+
+</body>
+
+</html>

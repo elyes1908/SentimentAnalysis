@@ -138,3 +138,13 @@ td h3 {
     right: 1%;
     top: 1%;
 }
+
+.image-container {
+  max-width: 100%;
+  height: auto;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+}

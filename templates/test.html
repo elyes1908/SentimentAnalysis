@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Sentiment Analysis - DXC.technology</title>
+    <link rel="icon" href="../static/images/logo.jpg" type="image/icon type">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/mainpage.css') }}">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css"
+          rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+
+</head>
+
+<body style="background-color: white">
+<nav class="navbar-default">
+  <div class="container-fluid" style="height: 50px;">
+
+    <ul class="nav navbar-nav">
+      <li><a href={{ url_for('index') }}><img src="../static/images/logo.jpg" alt="Logo" width="20" height="20"></a></li>
+      <li class="active"><a href="{{ url_for('testModele') }}">Database Prediction</a></li>
+      <li><a href="#">Data Report</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+  <table id="dataset_table" class="table">
+        <thead>
+        <tr style="color: aliceblue;">
+            <td>Task</td>
+            <td>Comment</td>
+            <td>Feedback</td>
+
+        </tr>
+        </thead>
+      {% for i in range(length) %}
+        <tbody id="table">
+        {% if todos['prediction'][i] == "Positive" %}
+        <tr style="background: #1e7e34">
+            <td>{{ todos['Task'][i] }}</td>
+            <td>{{ todos['CommentValue'][i] }}</td>
+            <td>{{ todos['prediction'][i] }}</td>
+        </tr>
+        {% elif todos['prediction'][i] == "Negative" %}
+             <tr style="background: palevioletred">
+            <td>{{ todos['Task'][i] }}</td>
+            <td>{{ todos['CommentValue'][i] }}</td>
+            <td>{{ todos['prediction'][i] }}</td>
+        </tr>
+        {% endif %}
+        </tbody>
+        {% endfor %}
+    </table>
+</div>
+
+
+
+
+</body>
+
+</html>
