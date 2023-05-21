@@ -138,7 +138,6 @@ def testModele():
         print(data_xls['prediction'][i])
 
     jsonfiles = json.loads(data_xls.to_json(orient='records'))
-    # print(datetime.datetime.now() - now)
     collection = db1['dataAfterPreduction']
     collection.insert_many(jsonfiles)
 
